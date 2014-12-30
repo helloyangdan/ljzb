@@ -4,7 +4,6 @@
 </div>
 <div class="modal-body">
 <?php echo validation_errors(); ?>
-    <?php echo '<pre>'. print_r($this->session->userdata, TRUE) .'</pre>';?>
 <?php echo form_open();?>
 <table class="table">
 	<tr>
