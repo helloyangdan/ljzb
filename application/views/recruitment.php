@@ -7,9 +7,9 @@
         });
     });
 </script>
-<div class="mb10"><a href="#"><img src="/img/banner_product.jpg" /></a></div>
+<div class=""><a href="#"><img src="/img/banner_product.jpg" /></a></div>
 
-<div class="mb10">
+<div class="">
     <h1 class="subtitle">RECRUITMENT<span>人才招聘<span></h1>
 </div>
 
@@ -28,12 +28,8 @@
             <a href="#"><img src="/img/sub_ad_01.jpg" /></a>
         </div>
 
-        <div class="mb10 leftcontact">
-            <h1>联系我们</h1>
-            <h2>CONTACT US</h2>
-            <h3>86-755-88852929</h3>
-            <h4>E-mail:service@szlongjia.com</h4>
-            <h5>深圳市龙嘉珠宝实业有限公司</h5>
+        <div class="mb10">
+            <img src="/img/contactus.gif" />
         </div>
 
     </div>

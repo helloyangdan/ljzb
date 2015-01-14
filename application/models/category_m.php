@@ -124,4 +124,31 @@ class Category_m extends MY_Model
         return $array;
     }
 
+    public function get_product_all_cate()
+    {
+        $this->db->select();
+        $this->db->where('parent_id not in (1,4) and id not in (1,4)');
+        $this->db->order_by('order','DESC');
+        $result = $this->db->get('categories')->result_array();
+
+        $array = array();
+        foreach($result as $v) {
+            if(! $v['parent_id']){
+                $array[$v['id']] = $v;
+            }else{
+                $array[$v['parent_id']]['children'][] = $v;
+            }
+        }
+        
+        return $array;
+    }
+
+    public function get_parent_cate($id)
+    {
+        $this->db->select('categories.*, c.picture as parent_picture, c.title as parent_title, c.id as parent_id');
+        $this->db->join('categories as c', 'categories.parent_id=c.id', 'left');
+        $this->db->where('categories.id', $id);
+        return $this->db->get('categories')->result_array();
+    }
+
 }

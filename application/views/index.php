@@ -1,6 +1,6 @@
 
 <style type="text/css">
-    .effectContainer { width: 1000px; height: 470px; overflow: hidden;margin-top:24px; }
+    .effectContainer { width: 1000px; height: 470px; overflow: hidden;}
     .slide { position: relative; height: 470px; width: 953px; background: #fff;}
 
     /**   fadnav   **/
@@ -48,7 +48,7 @@
         $(document).ready(init);
     })(jQuery);
 </script>
-<div class="mb10 effectContainer">
+<div class="mb5 effectContainer">
     <div class="slide"><a href="#"><img src="img/flash01.jpg" /></a></div>
     <div class="slide"><a href="#"><img src="img/flash02.jpg" /></a></div>
     <div class="slide"><a href="#"><img src="img/flash03.jpg" /></a></div>
@@ -57,7 +57,7 @@
 
 
 
-<div class="mb10">
+<div class="mb5">
     <a href="/about" class="l"><img src="img/index_ad_01.jpg" /></a>
     <a href="" class="r"><img src="img/index_ad_02.jpg" /></a>
     <div class="clear"></div>
@@ -71,33 +71,33 @@
 
     <div id="news">
         <div class="newsbox">
-            <p class="title"><a href="news"><img src="img/index_title_01.png" /></a></p>
+            <p class="title"><a href="/news"><img src="img/index_title_01.png" /></a></p>
             <ul>
                 <li>
-                    <h4><a href="#">钯金I5系列首饰 解读...</a><h4>
-                            <p><a href="#">——2010龙嘉珠宝携手国际钯金协会推荐款首饰闪亮登场2010国际钯金协会推荐款首饰钯金I5系列首饰闪亮登场，</a></p>
+                    <h4><a href="#">钯金I5系列首饰 解读...</a></h4>
+                     <p><a href="#">——2010龙嘉珠宝携手国际钯金协会推荐款首饰闪亮登场2010国际钯金协会推荐款首饰钯金I5系列首饰闪亮登场，</a></p>
                 </li>
                 <li>
                     <h4><a href="#">2010龙嘉珠宝推荐款首饰...</a></h4>
                     <p><a href="#">——受经济数据和美元走高等因素的综合影响，11月16日铂金价格下跌7.49美元徘徊在每盎司1664.50美元附近，</a></p>
                 </li>
             </ul>
-            <a class="more" href="#"> > more...</a>
+            <a class="more" href="/news"> > more...</a>
         </div>
 
         <div class="classbox">
             <a href="#"><img src="img/index_ad_03.jpg" /></a>
             <div class="title">
                 <h3 class="l">铂金教室</h3>
-                <a class="more r" href="#"> > more ...</a>
+                <a class="more r" href="/problem"> > more ...</a>
                 <span class="clear"></span>
             </div>
             <ul>
-                <li><a href="#">钯金与铂金及白色K金的区别</a></li>
-                <li><a href="#">钯金在全球的分布</a></li>
-                <li><a href="#">钯金在国际市场上的地位</a></li>
-                <li><a href="#">钯金首饰有什么优点</a></li>
-                <li><a href="#">如何保养钯金首饰</a></li>
+                <li><a href="/problem">钯金与铂金及白色K金的区别</a></li>
+                <li><a href="/problem">钯金在全球的分布</a></li>
+                <li><a href="/problem">钯金在国际市场上的地位</a></li>
+                <li><a href="/problem">钯金首饰有什么优点</a></li>
+                <li><a href="/problem">如何保养钯金首饰</a></li>
             </ul>
         </div>
     </div>

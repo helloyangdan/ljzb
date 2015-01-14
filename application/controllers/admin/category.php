@@ -36,12 +36,30 @@ class Category extends Admin_Controller
 
         // Process the form
         if ($this->form_validation->run() == TRUE) {
-            $data = $this->category_m->array_from_post(array(
+            $formdata = $this->category_m->array_from_post(array(
                 'title',
                 'order',
                 'parent_id'
             ));
-            $this->category_m->save($data, $id);
+
+            $config_u['upload_path'] = './data/product';
+            $config_u['allowed_types'] = 'gif|jpg|png';
+            $config_u['encrypt_name'] = true;
+
+            $this->load->library('upload', $config_u);
+
+            if(!$this->upload->do_upload('picture')) {
+                //echo $this->upload->display_errors();
+            }else{
+
+                $data['upload_data']=$this->upload->data();  //文件的一些信息
+                $img=$data['upload_data']['file_name'];  //取得文件名
+
+                $formdata['picture'] = '/data/product/'.$img;
+
+            }
+
+            $this->category_m->save($formdata, $id);
             redirect('admin/category');
         }
 

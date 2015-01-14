@@ -1,8 +1,8 @@
 
 
-    <div class="mb10"><a href="#"><img src="/img/banner_product.jpg" /></a></div>
+    <div class=""><a href="#"><img src="<?php if($picture): echo $picture; else:?>/img/banner_product.jpg<?php endif;?>" /></a></div>
 
-    <div class="mb10">
+    <div class="">
         <h1 class="subtitle">PRODUCTS<span>产品展示<span></h1>
     </div>
 
@@ -10,7 +10,23 @@
         <div class="leftbox">
             <div class="leftnav mb10">
                 <ul>
-                    <li>
+                    <?php foreach($categories as $v):?>
+                        <li style="font-size:14px;"><img src="/img/star.png" />
+                            <?php if($v['id'] == 10):?>黄金<span>GOLD</span><?php endif;?>
+                            <?php if($v['id'] == 11):?>铂金<span>PLATINUM</span><?php endif;?>
+                            <?php if($v['id'] == 12):?>镶嵌<span>MOSAIC</span><?php endif;?>
+                            <?php if($v['children']):?>
+                                <ol>
+                                <?php foreach($v['children'] as $vv):?>
+                                    <li><a <?php if($both['id'] == $vv['id']):?>class="active"<?php endif;?> href="/product/index/<?php echo $vv['id'];?>"><?php echo $vv['title'];?></a></li>
+                                <?php endforeach;?>
+                                </ol>
+                            <?php endif;?>
+
+                        <li>
+                    <?php endforeach;?>
+
+                    <!-- <li>
                         <a href="#" class="navtitle"><img src="/img/star.png" />黄金<span>GOLD</span></a>
                         <ol>
                             <li><a href="#">囍金良缘</a></li>
@@ -33,7 +49,7 @@
                             <li><a href="#">爱随心系列</a></li>
                             <li><a href="#">爱珍藏系列</a></li>
                         </ol>
-                    </li>
+                    </li> -->
                     <li><a href="#" class="navtitle"><img src="/img/star.png" />定制专区</a>
                         <ol>
                             <li><a href="#">定制案例</a></li>
@@ -47,19 +63,15 @@
 <!--                <a href="#"><img src="img/sub_ad_01.jpg" /></a>-->
 <!--            </div>-->
 
-            <div class="mb10 leftcontact">
-                <h1>联系我们</h1>
-                <h2>CONTACT US</h2>
-                <h3>86-755-88852929</h3>
-                <h4>E-mail:service@szlongjia.com</h4>
-                <h5>深圳市龙嘉珠宝实业有限公司</h5>
+            <div class="mb10">
+                <img src="/img/contactus.gif" />
             </div>
 
         </div>
 
         <div class="rightbox">
             <div class="crumb mb10">
-                <a href="#">首页</a> > <a href="#">产品展示</a> > <a href="#">铂 金</a> > 如愿·本色系列
+                <a href="/">首页</a> > <a href="/product">产品展示</a> > <a href="#"><?php echo $both['parent_title'];?></a> > <?php echo $both['title'];?>
             </div>
 
             <div class="rbmain">
@@ -71,15 +83,18 @@
                 </ul>
 
                 <div class="clear"></div>
-
+                <?php if($arr):?>
                 <div class="pager">
                     <?php if($prev):?><a class="pleft" href="<?php echo $prev;?>">上一页</a><?php endif;?>
                     <?php if($next):?><a class="pright" href="<?php echo $next;?>">下一页</a><?php endif;?>
                 </div>
+                <?php else:?>
+                    暂无数据
+                <?php endif;?>
 
  <?php elseif($control == 'view'):?>
 
-                <div style="text-align: center;height:400px;"><img src="<?php echo $product->picture;?>" /></div>
+                <div style="text-align: center;padding:15px 0 30px;"><img src="<?php echo $product->picture;?>" /></div>
 
      <div class="sp_box">
          <a class="prevPage leftBtn"></a>

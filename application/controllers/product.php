@@ -7,14 +7,20 @@ class Product extends Frontend_Controller {
         parent::__construct();
         $this->data['nav'] = 'product';
         $this->load->model("product_m");
+        $this->load->model('category_m');
     }
 
     public function index($id=13, $page=1)
     {
         $this->data['id'] = $id;
+        //
+        $this->data['categories'] = $this->category_m->get_product_all_cate();
+        $both = $this->category_m->get_parent_cate($id);
+        $both = $both[0];
+        $this->data['both'] = $both;
+        $this->data['picture'] = $both['picture'] ? $both['picture'] : $both['parent_picture'];
 
         // Fetch all articles
-
         $config['base_url'] = site_url('product/index/'.$id.'/');
 
         $count = $this->product_m->get_all_count($id);
@@ -26,6 +32,7 @@ class Product extends Frontend_Controller {
 
         $prev = max($page - 1 , 1);
         $next = min($total_page, $page + 1);
+
         $this->data['prev'] = ($prev != $page) ? site_url('product/index/'.$id.'/'.$prev) : '';
         $this->data['next'] = ($next != $page) ? site_url('product/index/'.$id.'/'.$next) : '';
 
@@ -40,9 +47,18 @@ class Product extends Frontend_Controller {
 
     public function view($id)
     {
+
         $this->data['product'] = $this->product_m->get($id);
 
-        $this->data['arr'] = $this->product_m->get_all_list(14, 0);
+         //
+        $category_id = $this->data['product']->category;
+        $this->data['categories'] = $this->category_m->get_product_all_cate();
+        $both = $this->category_m->get_parent_cate($category_id);
+        $both = $both[0];
+        $this->data['both'] = $both;
+        $this->data['picture'] = $both['picture'] ? $both['picture'] : $both['parent_picture'];
+
+        $this->data['arr'] = $this->product_m->get_all_list(14, 0, $category_id);
 
         $this->data['control'] = 'view';
         $this->data['subview'] = 'product';

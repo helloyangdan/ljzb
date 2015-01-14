@@ -22,6 +22,7 @@
     switch($root){
         case '/Applications/XAMPP/xamppfiles/htdocs/ljzb':
         case 'D:\xampp\htdocs\ljzb';
+        case '/var/www/htm';
             define('ENVIRONMENT', 'development');
             break;
 

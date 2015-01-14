@@ -43,7 +43,7 @@ header,footer,section,aside,details,menu,article,section,nav,address,hgroup,figu
 hr {display: block;clear: both;*margin-top: -8px !important;*margin-bottom: -8px !important}
 /* 行内分割竖线 */
 .pipe {margin: 0 3px;color: #ddd}
-.mb10{margin-bottom:10px}.mb15{margin-bottom:15px}.mb20{margin-bottom:20px}
+.mb5{margin-bottom: 5px;}.mb10{margin-bottom:10px}.mb15{margin-bottom:15px}.mb20{margin-bottom:20px}
 .pd5{ padding:5px}.pd10{ padding:10px}}.pd20{ padding:20px}
 
 
@@ -120,6 +120,7 @@ a{color:#666}a:hover {color:#68AB12}a:hover {color: #d4986f}
 .leftbox .leftnav ul li.last{background:none;}
 .leftbox .leftnav ol{padding-left: 20px;}
 .leftbox .leftnav a{font-size: 14px;}
+.leftbox .leftnav a.active{color: #d4986f}
 .leftbox .leftnav a span{font-size: 11px;padding-left: 5px;}
 .leftbox .leftcontact{background-color: #eeeeee;padding: 20px;color: #b5b5b6;}
 .leftbox .leftcontact h1{font-size: 14px;font-weight: bold;}
@@ -157,7 +158,7 @@ a{color:#666}a:hover {color:#68AB12}a:hover {color: #d4986f}
 
 
 /* news */
-.cont_box{ padding:20px 0 30px;}
+.cont_box{ padding:0px 0 30px;}
 dl.news_ls{ padding-left:12px;}
 dl.news_ls dd{ padding-bottom:1px;clear: both;}
 dl.news_ls dd a{ background:url(/img/bg/bg_list2.jpg) left top no-repeat; height:61px; width:651px; overflow:hidden;display: block;}
