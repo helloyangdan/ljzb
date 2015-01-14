@@ -21,6 +21,7 @@
     $root = dirname(__FILE__);
     switch($root){
         case '/Applications/XAMPP/xamppfiles/htdocs/ljzb':
+        case 'D:\xampp\htdocs\ljzb';
             define('ENVIRONMENT', 'development');
             break;
 

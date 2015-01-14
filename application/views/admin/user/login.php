@@ -1,22 +1,22 @@
 <div class="modal-header">
-	<h3>Log in</h3>
-	<p>Please log in using your credentials</p>
+	<h3>登录</h3>
+	<p>请输入账号密码登录后台</p>
 </div>
 <div class="modal-body">
 <?php echo validation_errors(); ?>
 <?php echo form_open();?>
 <table class="table">
 	<tr>
-		<td>Email</td>
+		<td>账号</td>
 		<td><?php echo form_input('email'); ?></td>
 	</tr>
 	<tr>
-		<td>Password</td>
+		<td>密码</td>
 		<td><?php echo form_password('password'); ?></td>
 	</tr>
 	<tr>
 		<td></td>
-		<td><?php echo form_submit('submit', 'Log in', 'class="btn btn-primary"'); ?></td>
+		<td><?php echo form_submit('submit', '登录', 'class="btn btn-primary"'); ?></td>
 	</tr>
 </table>
 <?php echo form_close();?>

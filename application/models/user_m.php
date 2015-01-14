@@ -19,22 +19,22 @@ class User_M extends MY_Model
 	public $rules_admin = array(
 		'name' => array(
 			'field' => 'name', 
-			'label' => 'Name', 
+			'label' => '用户名',
 			'rules' => 'trim|required|xss_clean'
 		), 
 		'email' => array(
 			'field' => 'email', 
-			'label' => 'Email', 
+			'label' => '邮件地址',
 			'rules' => 'trim|required|valid_email|callback__unique_email|xss_clean'
 		), 
 		'password' => array(
 			'field' => 'password', 
-			'label' => 'Password', 
+			'label' => '密码',
 			'rules' => 'trim|matches[password_confirm]'
 		),
 		'password_confirm' => array(
 			'field' => 'password_confirm', 
-			'label' => 'Confirm password', 
+			'label' => '重复密码',
 			'rules' => 'trim|matches[password]'
 		),
 	);

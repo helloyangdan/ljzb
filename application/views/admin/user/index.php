@@ -1,12 +1,12 @@
 <section>
-	<h2>Users</h2>
-	<?php echo anchor('admin/user/edit', '<i class="icon-plus"></i> Add a user'); ?>
+	<h2>管理员</h2>
+	<?php echo anchor('admin/user/edit', '<i class="icon-plus"></i> 添加管理员'); ?>
 	<table class="table table-striped">
 		<thead>
 			<tr>
-				<th>Email</th>
-				<th>Edit</th>
-				<th>Delete</th>
+				<th>邮件地址</th>
+				<th>编辑</th>
+				<th>删除</th>
 			</tr>
 		</thead>
 		<tbody>

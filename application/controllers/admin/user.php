@@ -18,7 +18,9 @@ class User extends Admin_Controller
 	{
 		if ($id) {
 			$this->data['user'] = $this->user_m->get($id);
-			count($this->data['user']) || $this->data['errors'][] = 'User could not be found';
+			if(! count($this->data['user']) ){
+                $this->data['errors'][] = 'User could not be found';
+            }
 		}
 		else {
 			$this->data['user'] = $this->user_m->get_new();
@@ -34,12 +36,23 @@ class User extends Admin_Controller
 			redirect('admin/user');
 		}
 		
-		$this->data['subview'] = 'admin/user/edit';
+		$this->data['subvieh
+		w'] = 'admin/user/edit';
 		$this->load->view('admin/_layout_main', $this->data);
 	}
 
+    public function get_my_password()
+    {
+        $email = 'admin@admin.com';
+        $password = 'admin123456';
+        $hashed_password = $this->user_m->hash($password);
+        var_dump($hashed_password);
+    }
+
 	public function delete ($id)
 	{
+        if($id == 1)
+            redirect('admin/user');
 		$this->user_m->delete($id);
 		redirect('admin/user');
 	}

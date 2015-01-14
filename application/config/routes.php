@@ -39,6 +39,15 @@
 */
 
 $route['default_controller'] = "welcome";
+
+$route['about'] = "welcome/about";
+$route['sale'] = "welcome/sale";
+
+$route['service'] = "welcome/service";
+$route['problem'] = 'welcome/service/2';
+
+$route['contact'] = "welcome/contact";
+
 $route['404_override'] = '';
 
 

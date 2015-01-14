@@ -1,0 +1,156 @@
+/* 全局CSS @author 105167721@qq.com */
+body{ margin: 0px; padding: 0px; background-color:#fff;	font:'Microsoft Yahei',Tahoma,sans-serif; text-align:center;}
+.yellow{color:#F48200}
+a.yellow{color:#F48200;text-decoration: none;font-weight: bold; font-size:14px}
+a.yellow:hover{color:#97E3FF;text-decoration: none;font-weight: bold;font-size:14px}
+.blue{ color:#11A7CA;}
+.red { color: #F00; }
+
+/* 左边菜单 */
+.left_title { font-size:13px;font-weight:bold;color:#269;background-image: url(img_04.gif);background-repeat: repeat-x; height: 26px;text-align: center;}
+.left_menu01 { font-size: 12px;	background-color: #FFFFFF;	background-image: url(img_07.gif);	background-repeat: repeat-y;background-position: right;			                color: #0099cc;	border-right-width: 1px;	border-right-style: solid;	border-right-color: #DDE6EB;	width: 100%;}
+.left_menu01 td{ padding-left: 25px;	border-bottom-width: 1px;	border-bottom-style: solid;	border-bottom-color: #DDE6EB;	
+                 background-image:url(ico_03.gif);	background-position: 12px center;	background-repeat: no-repeat;	height:26px;	line-height:26px}
+.left_menu01 td a{color:#0099cc;text-decoration: none;}
+.left_menu01 td a:hover{color:#E46200;text-decoration: none;}
+
+/* 表单页 */
+.form_list{	border:1px solid #E4EBF3;width:97%;	font-size: 12px;margin:15px 0 10px 0;background-color:#FFF;}
+.form_list th{ background-color:#EFF8FE;border-bottom:1px solid #E4EBF3; height:30px;}
+
+
+/* 列表页 */
+/***********************************
+ *     表头标签开始
+***********************************/
+.table_head{
+	background-image: url(img_09.gif);
+	background-repeat: repeat-x;
+	text-align: left;
+	height: 30px;
+	border-top-width: 1px;
+	border-top-style: solid;
+	border-top-color: #C0D0E4;
+	font-size: 12px;
+	font-weight: bold;
+	color: #0099CB;
+	border-left-width: 1px;
+	border-left-style: solid;
+	border-left-color: #C0D0E4;
+	border-right-width: 1px;
+	border-right-style: solid;
+	border-right-color: #C0D0E4;	
+	margin-top:15px;
+}
+
+.table_form {
+	background-color:#FFFFFF;
+	border-left-width: 1px;
+	border-left-style: solid;
+	border-left-color: #C0D0E4;
+	font-size: 12px;
+	border-top-width: 1px;
+	border-top-style: solid;
+	border-top-color: #C0D0E4;	
+}
+.table_form td {
+	font-size:12px;
+	height:23px;	
+	color: #000000;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-right-color: #D9E2EE;
+	border-bottom-color: #D9E2EE;
+}
+.table_form tr{
+	background-color:#FAFFFF;
+
+/*background-color:expression((this.rowIndex%2==0)?"#F5F5F5":"#FFFFFF");ryo:expression(onmouseover=function(){this.style.backgroundColor='#C2DFEF'},onmouseout=function(){this.style.backgroundColor=(this.style.backgroundColor='#CCFFFF'?((this.rowIndex%2==0)?"#F5F5F5":"#FFFFFF"):'#CCFFFF')},onclick=function(){this.style.backgroundColor='#CCFFFF'})*/
+}
+.table_form th {
+	font: 12px;
+	color: #000000;
+	letter-spacing: 2px;
+	text-align: center;
+	height:26px;/******不能使用背景图，否则执行不了这段代友，原因暂不知********/
+
+	background-color:#CCFFFF
+	background-repeat: repeat-x;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-right-color: #C0D0E4;
+	border-bottom-color: #C0D0E4;
+	background-color: #EFF8FE;
+}
+.table_form td a{ color:#003366;text-decoration: none;}
+.table_form td a:hover{color:#11A466;text-decoration: none;}
+/***********************************
+ *     列表标签结束
+***********************************/
+
+
+/***********************************
+ *     表尾标签开始
+***********************************/
+.table_footer {
+	background-image: url(img_10.gif);
+	background-repeat: repeat-x;
+	height: 39px;
+	margin: 0px;	
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-left-style: solid;
+	border-right-color: #C0D0E4;
+	border-bottom-color: #C0D0E4;
+	border-left-color: #C0D0E4;
+	
+}
+
+
+/***********************************
+ *     批量传图的样式
+***********************************/
+#fileQueue {
+	width: 400px;
+	height: 160px;
+	overflow: auto;
+	border: 1px solid #E5E5E5;
+	margin-bottom: 10px;
+}
+
+.uploadifyQueueItem {
+	font: 11px Verdana, Geneva, sans-serif;
+	border: 2px solid #E5E5E5;
+	background-color: #F5F5F5;
+	margin-top: 5px;
+	padding: 10px;
+	width: 350px;
+}
+.uploadifyError {
+	border: 2px solid #FBCBBC !important;
+	background-color: #FDE5DD !important;
+}
+.uploadifyQueueItem .cancel {
+	float: right;
+}
+.uploadifyProgress {
+	background-color: #FFFFFF;
+	border-top: 1px solid #808080;
+	border-left: 1px solid #808080;
+	border-right: 1px solid #C5C5C5;
+	border-bottom: 1px solid #C5C5C5;
+	margin-top: 10px;
+	width: 100%;
+}
+.uploadifyProgressBar {
+	background-color: #0099FF;
+	width: 1px;
+	height: 3px;
+}

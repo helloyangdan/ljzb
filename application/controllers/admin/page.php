@@ -44,7 +44,9 @@ class Page extends Admin_Controller
 		// Fetch a page or set a new one
 		if ($id) {
 			$this->data['page'] = $this->page_m->get($id);
-			count($this->data['page']) || $this->data['errors'][] = 'page could not be found';
+			if (! count($this->data['page']) ) {
+                $this->data['errors'][] = 'page could not be found';
+            }
 		}
 		else {
 			$this->data['page'] = $this->page_m->get_new();

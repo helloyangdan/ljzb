@@ -1,13 +1,13 @@
 <section>
-	<h2>Pages</h2>
-	<?php echo anchor('admin/page/edit', '<i class="icon-plus"></i> Add a page'); ?>
+	<h2>页面管理</h2>
+	<?php echo anchor('admin/page/edit', '<i class="icon-plus"></i> 添加页面'); ?>
 	<table class="table table-striped">
 		<thead>
 			<tr>
-				<th>Title</th>
-				<th>Parent</th>
-				<th>Edit</th>
-				<th>Delete</th>
+				<th>标题</th>
+				<th>上级</th>
+				<th>编辑</th>
+				<th>删除</th>
 			</tr>
 		</thead>
 		<tbody>
@@ -21,7 +21,7 @@
 <?php endforeach; ?>
 <?php else: ?>
 		<tr>
-			<td colspan="3">We could not find any pages.</td>
+			<td colspan="3">没有数据.</td>
 		</tr>
 <?php endif; ?>	
 		</tbody>
